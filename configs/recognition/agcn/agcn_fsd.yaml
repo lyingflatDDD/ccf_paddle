@@ -15,7 +15,7 @@ DATASET: #DATASET field
    train:
        format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
        file_path: "/public/datasets/juan/skiing/skiing/train_data_split.npy" #Mandatory, train data index file path
-       label_path: "/public/home/cxiao/Study/data/skiing/train_label_split.npy"
+       label_path: "/public/datasets/juan/skiing/skiing/train_label_split.npy"
    valid:
        format: "SkeletonDataset" #Mandatory, indicate the type of dataset, associate to the 'paddlevidel/loader/dateset'
        file_path: "/public/datasets/juan/skiing/skiing/val_data.npy" #Mandatory, train data index file path
