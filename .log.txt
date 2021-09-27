@@ -1,0 +1,85 @@
+[09/27 19:06:09] DALI is not installed, you can improve performance if use DALI
+[09/27 19:07:29] DALI is not installed, you can improve performance if use DALI
+[09/27 19:07:34] [35mDATASET[0m : 
+[09/27 19:07:34]     [35mbatch_size[0m : [92m64[0m
+[09/27 19:07:34]     [35mnum_workers[0m : [92m4[0m
+[09/27 19:07:34]     [35mtest[0m : 
+[09/27 19:07:34]         [35mfile_path[0m : [92m/public/datasets/juan/skiing/skiing/test_A_data.npy[0m
+[09/27 19:07:34]         [35mformat[0m : [92mSkeletonDataset[0m
+[09/27 19:07:34]         [35mtest_mode[0m : [92mTrue[0m
+[09/27 19:07:34]     [35mtest_batch_size[0m : [92m1[0m
+[09/27 19:07:34]     [35mtest_num_workers[0m : [92m0[0m
+[09/27 19:07:34]     [35mtrain[0m : 
+[09/27 19:07:34]         [35mfile_path[0m : [92m/public/datasets/juan/skiing/skiing/train_data_split.npy[0m
+[09/27 19:07:34]         [35mformat[0m : [92mSkeletonDataset[0m
+[09/27 19:07:34]         [35mlabel_path[0m : [92m/public/home/cxiao/Study/data/skiing/train_label_split.npy[0m
+[09/27 19:07:34]     [35mvalid[0m : 
+[09/27 19:07:34]         [35mfile_path[0m : [92m/public/datasets/juan/skiing/skiing/val_data.npy[0m
+[09/27 19:07:34]         [35mformat[0m : [92mSkeletonDataset[0m
+[09/27 19:07:34]         [35mlabel_path[0m : [92m/public/datasets/juan/skiing/skiing/val_label.npy[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mINFERENCE[0m : 
+[09/27 19:07:34]     [35mname[0m : [92mSTGCN_Inference_helper[0m
+[09/27 19:07:34]     [35mnum_channels[0m : [92m2[0m
+[09/27 19:07:34]     [35mperson_nums[0m : [92m1[0m
+[09/27 19:07:34]     [35mvertex_nums[0m : [92m25[0m
+[09/27 19:07:34]     [35mwindow_size[0m : [92m350[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mMETRIC[0m : 
+[09/27 19:07:34]     [35mname[0m : [92mSkeletonMetric[0m
+[09/27 19:07:34]     [35mout_file[0m : [92msubmission.csv[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mMIX[0m : 
+[09/27 19:07:34]     [35malpha[0m : [92m0.2[0m
+[09/27 19:07:34]     [35mname[0m : [92mMixup[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mMODEL[0m : 
+[09/27 19:07:34]     [35mbackbone[0m : 
+[09/27 19:07:34]         [35mname[0m : [92mAGCN[0m
+[09/27 19:07:34]     [35mframework[0m : [92mRecognizerGCN[0m
+[09/27 19:07:34]     [35mhead[0m : 
+[09/27 19:07:34]         [35mls_eps[0m : [92m0.1[0m
+[09/27 19:07:34]         [35mname[0m : [92mSTGCNHead[0m
+[09/27 19:07:34]         [35mnum_classes[0m : [92m30[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mOPTIMIZER[0m : 
+[09/27 19:07:34]     [35mlearning_rate[0m : 
+[09/27 19:07:34]         [35mcosine_base_lr[0m : [92m0.05[0m
+[09/27 19:07:34]         [35miter_step[0m : [92mTrue[0m
+[09/27 19:07:34]         [35mmax_epoch[0m : [92m100[0m
+[09/27 19:07:34]         [35mname[0m : [92mCustomWarmupCosineDecay[0m
+[09/27 19:07:34]         [35mwarmup_epochs[0m : [92m10[0m
+[09/27 19:07:34]         [35mwarmup_start_lr[0m : [92m0.005[0m
+[09/27 19:07:34]     [35mmomentum[0m : [92m0.9[0m
+[09/27 19:07:34]     [35mname[0m : [92mMomentum[0m
+[09/27 19:07:34]     [35mweight_decay[0m : 
+[09/27 19:07:34]         [35mname[0m : [92mL2[0m
+[09/27 19:07:34]         [35mvalue[0m : [92m0.0001[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mPIPELINE[0m : 
+[09/27 19:07:34]     [35mtest[0m : 
+[09/27 19:07:34]         [35msample[0m : 
+[09/27 19:07:34]             [35mname[0m : [92mAutoPadding[0m
+[09/27 19:07:34]             [35mwindow_size[0m : [92m350[0m
+[09/27 19:07:34]         [35mtransform[0m : 
+[09/27 19:07:34]             [35mSkeletonNorm[0m : [92mNone[0m
+[09/27 19:07:34]     [35mtrain[0m : 
+[09/27 19:07:34]         [35msample[0m : 
+[09/27 19:07:34]             [35mname[0m : [92mAutoPadding[0m
+[09/27 19:07:34]             [35mwindow_size[0m : [92m350[0m
+[09/27 19:07:34]         [35mtransform[0m : 
+[09/27 19:07:34]             [35mSkeletonNorm[0m : [92mNone[0m
+[09/27 19:07:34]     [35mvalid[0m : 
+[09/27 19:07:34]         [35msample[0m : 
+[09/27 19:07:34]             [35mname[0m : [92mAutoPadding[0m
+[09/27 19:07:34]             [35mwindow_size[0m : [92m350[0m
+[09/27 19:07:34]         [35mtransform[0m : 
+[09/27 19:07:34]             [35mSkeletonNorm[0m : [92mNone[0m
+[09/27 19:07:34] ------------------------------------------------------------
+[09/27 19:07:34] [35mepochs[0m : [92m1000[0m
+[09/27 19:07:34] [35mlog_interval[0m : [92m10[0m
+[09/27 19:07:34] [35mmodel_name[0m : [92mAGCN[0m
+[09/27 19:09:15] Loading data, it will take some moment...
+[09/27 19:09:21] Data Loaded!
+[09/27 19:09:21] Loading data, it will take some moment...
+[09/27 19:09:23] Data Loaded!

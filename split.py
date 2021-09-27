@@ -9,9 +9,9 @@ import os
 from sklearn.model_selection import train_test_split
 
 def main():
-    root_path = "/public/home/cxiao/Study/data/skiing"
-    orgin = os.path.join(root_path,"train_data.npy") 
-    label = os.path.join(root_path,"train_label.npy")
+    root_path = "/public/datasets/juan/skiing/skiing"
+    orgin = os.path.join(root_path,"train_origin.npy") 
+    label = os.path.join(root_path,"train_label_origin.npy")
     
     # read data 
     orgin_np = np.load(orgin)
@@ -28,13 +28,13 @@ def main():
 
 
 def analize():
-    root_path = "/public/home/cxiao/Study/data/skiing"
+    root_path = "/public/datasets/juan/skiing/skiing"
     orgin = os.path.join(root_path,"train_data.npy") 
-    label = os.path.join(root_path,"val_label.npy")
+    label = os.path.join(root_path,"train_label_split.npy")
 
     label_np = np.load(label)
 
-    index = [0 for _ in range(10)]
+    index = [0 for _ in range(30)]
     for i in range(len(label_np)):
 	   # print(label_np[i])
 	    index[int(label_np[i])]+=1
